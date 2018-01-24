@@ -1,0 +1,21 @@
+h1{
+	background: purple;
+	color: white;
+	border: 20px magenta ridge;
+}
+
+h2{
+	background: hotpink;
+	color:white;
+	border:10px magenta solid;
+}
+
+li{
+	background:pink;
+	color:white;
+}
+
+ul{
+	background:pink;
+	color:white;
+}

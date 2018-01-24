@@ -1,0 +1,20 @@
+body{
+	background-color:purple;
+	color: white;
+	font-size: 20px;
+}
+
+hr{
+	border-color: white;
+	border-width: 1.5px;
+}
+
+#canva{
+	border: 50px magenta double;
+	background:aqua;
+}
+
+#canva1{
+	border: 50px black solid;
+	background:white;
+}
