@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preloa, crete:create, update:update});
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, crete:create, update:update});
 var score = 0;
 var lives = 1.5;
 
