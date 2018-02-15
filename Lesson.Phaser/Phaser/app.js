@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, crete:create, update:update});
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:create, update:update});
 var score = 0;
 var lives = 1.5;
 
@@ -15,8 +15,8 @@ function create(){
 
 	game.add.sprite(0, 0, 'sky');
 
-	platforms = game.add.physicsGroups();
-	platforms.group.enableBody = true;
+	platforms = game.add.physicsGroup();
+	platforms.enableBody = true;
 
 	var ground = platforms.create(0, 550, 'ground');
 	ground.scale.setTo(2,2);
