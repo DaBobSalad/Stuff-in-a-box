@@ -55,7 +55,7 @@ function create(){
 		enemy1.body.collideWorldBound = true;
 
 		stars = game.add.physicsGroup();
-		star.enableBody = true;
+		stars.enableBody = true;
 
 		for(var i=0; i < 14; i++){
 			var star = stars.create(i * 70, 0, 'star');
@@ -69,9 +69,9 @@ function create(){
 
 
 function update(){
-	game.physics.arcade.collision(player, platforms);
-	game.physics.arcade.collision(stars, platforms);
-	game.physics.arcade.collision(enemy1, platforms);
+	game.physics.arcade.collide(player, platforms);
+	game.physics.arcade.collide(stars, platforms);
+	game.physics.arcade.collide(enemy1, platforms);
 
 	player.body.velocity.x = 0;
 
