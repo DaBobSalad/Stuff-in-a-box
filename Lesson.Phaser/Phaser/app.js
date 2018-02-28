@@ -46,7 +46,7 @@ function create(){
 		player.body.bounce.y = 0.5;
 		player.body.collideWorldBound = true;
 
-		enemy1 = game.add.sprite(760, 20, 'baddie')
+		enemy1 = game.add.sprite(760, 20, 'dog')
 		enemy1.animations.add('left', [0,1],10,true);
 		enemy1.animations.add('right', [3,4],10, true)	
 		game.physics.arcade.enable(enemy1);
