@@ -44,7 +44,7 @@ function create(){
 		game.physics.arcade.enable(player);
 		player.body.gravity.y = 100;
 		player.body.bounce.y = 0.5;
-		player.body.collideWorldBound = true;
+		player.body.collideWorldBounds = true;
 
 		enemy1 = game.add.sprite(760, 20, 'dog')
 		enemy1.animations.add('left', [0,1],10,true);
@@ -52,7 +52,7 @@ function create(){
 		game.physics.arcade.enable(enemy1);
 		enemy1.body.gravity.y = 1000;
 		enemy1.body.bounce.y = 0.3;
-		enemy1.body.collideWorldBound = true;
+		enemy1.body.collideWorldBounds = true;
 
 		stars = game.add.physicsGroup();
 		stars.enableBody = true;
