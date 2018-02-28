@@ -24,7 +24,7 @@ function create(){
 
 	var ledge = platforms.create(400, 400, 'ground');
 	ledge.body.immovable = true;
-	ledge = platforms.create(-100, 250, 'ground');
+	ledge = platforms.create(-100, 200, 'ground');
 	ledge.body.immovable = true;
 	ledge = platforms.create();
 
