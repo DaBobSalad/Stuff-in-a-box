@@ -88,7 +88,9 @@ function update(){
 		player.frame = 4;
 	}
 
-	if(cursors.up.is,down)
+	if(cursors.up.is,down){
 		player.body.velocity.y = -300;
+		}
+	}
 
 }
