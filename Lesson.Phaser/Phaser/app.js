@@ -24,7 +24,7 @@ function create(){
 
 	var ledge = platforms.create(400, 400, 'ground');
 	ledge.body.immovable = true;
-	ledge = platforms.create();
+	ledge = platforms.create(-100, 250, 'ground');
 	ledge.body.immovable = true;
 	ledge = platforms.create();
 
@@ -34,7 +34,7 @@ function create(){
 	scoretext = game.add.text(420, 560, score, style);
 
 	livelabel = game.add.text(10, 50, "Lives-", style);
-	livetext = game.add.text(120, 5, lives, style);
+	livetext = game.add.text(120, 50, lives, style);
 }
 
 function update(){
