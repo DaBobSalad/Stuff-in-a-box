@@ -78,9 +78,7 @@ function update(){
 	if(cursors.left.isDown){
 		player.animation.play('left');
 		player.body.velocity.x = -150;
-
-
-	if(cursors.right.isDown){
+	} else if(cursors.right.isDown){
 		player.animation.play('right');
 		player.body.velocity.x = 150;
 	} else{
@@ -90,7 +88,7 @@ function update(){
 
 	if(cursors.up.is,down){
 		player.body.velocity.y = -300;
-		}
 	}
+	
 
 }
