@@ -33,8 +33,8 @@ function create(){
 	scorelabel = game.add.text(300, 560, "Score-", style);
 	scoretext = game.add.text(420, 560, score, style);
 
-	livelabel = game.add.text(10, 50, "Lives-", style);
-	livetext = game.add.text(120, 50, lives, style);
+	lifelabel = game.add.text(10, 50, "Lives-", style);
+	lifeText = game.add.text(120, 50, lives, style);
 
 	//lesson 8
 
