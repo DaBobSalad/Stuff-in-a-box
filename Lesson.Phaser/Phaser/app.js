@@ -131,5 +131,5 @@ function update(){
 		score += 10;
 		scoretext.setText(score);
 		star.kill();
-		star.reset(math.random()* 760, 0);
+		star.reset(Math.random()* 760, 0);
 	}
