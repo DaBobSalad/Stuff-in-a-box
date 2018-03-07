@@ -70,7 +70,7 @@ function create(){
 
 function update(){
 	game.physics.arcade.collide(player, platforms);
-	game.physics.arcade.collide(stars, platforms);
+	game.physics.arcade.collide(stars, platforms); 
 	game.physics.arcade.collide(enemy1, platforms);
 
 	player.body.velocity.x = 0;
@@ -90,5 +90,25 @@ function update(){
 		player.body.velocity.y = -300;
 	}
 	
+	game.physics.arcade.overlap(player, stars, collectStar);
+	game.physics.arcade.overlap(player, enemy1, loseLife);
+
+	moveEnemy();
+
+	if(lives=0.0){
+		endgame();
+	}
 
 }
+
+	function endGame(){
+		player.kill();
+		scorelabel.text = "Game Over You scored " + score;
+		scoretext.visible = false;
+		lifetext.visible = false;
+		lifelabel.visible = false;
+	}
+
+	function moveEnemy(){
+		
+	}
