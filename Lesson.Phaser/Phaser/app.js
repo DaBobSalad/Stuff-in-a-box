@@ -119,7 +119,7 @@ function update(){
 		}
 	}
 
-	function loselife(player, enemy){
+	function loseLife(player, enemy){
 		lives -= 0.5;
 		lifetext.setText(lives);
 
