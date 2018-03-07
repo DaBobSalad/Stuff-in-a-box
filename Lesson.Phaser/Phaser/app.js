@@ -110,5 +110,26 @@ function update(){
 	}
 
 	function moveEnemy(){
-		
+		if(enemy1.x > 760){
+			enemy1.animations.play('left');
+			enemy1.body.velocity.x = -150;
+		} else if(enemy1.x < 405){
+			enemy1.animations.play('right');
+			enemy1.body.velocity.x = 120;
+		}
+	}
+
+	function loselife(player, enemy){
+		lives -= 0.5;
+		lifetext.setText(lives);
+
+		enemy.kill();
+		enemy.reset(10, 20);
+	}
+
+	function collectStar(player, stars){
+		score += 10;
+		scoretext.setText(score);
+		star.kill();
+		star.reset(math.random()* 760, 0);
 	}
