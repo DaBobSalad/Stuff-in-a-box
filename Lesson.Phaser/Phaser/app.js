@@ -121,7 +121,7 @@ function update(){
 
 	function loseLife(player, enemy){
 		lives -= 0.5;
-		lifetext.setText(lives);
+		lifeText.setText(lives);
 
 		enemy.kill();
 		enemy.reset(10, 20);
