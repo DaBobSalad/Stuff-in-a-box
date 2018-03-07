@@ -34,7 +34,7 @@ function create(){
 	scoretext = game.add.text(420, 560, score, style);
 
 	lifelabel = game.add.text(10, 50, "Lives-", style);
-	lifeText = game.add.text(120, 50, lives, style);
+	lifetext = game.add.text(120, 50, lives, style);
 
 	//lesson 8
 
@@ -121,7 +121,7 @@ function update(){
 
 	function loseLife(player, enemy){
 		lives -= 0.5;
-		lifeText.setText(lives);
+		lifetext.setText(lives);
 
 		enemy.kill();
 		enemy.reset(10, 20);
