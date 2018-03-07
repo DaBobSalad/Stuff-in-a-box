@@ -127,7 +127,7 @@ function update(){
 		enemy.reset(10, 20);
 	}
 
-	function collectStar(player, stars){
+	function collectStar(player, star){
 		score += 10;
 		scoretext.setText(score);
 		star.kill();
