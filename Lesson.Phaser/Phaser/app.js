@@ -95,8 +95,8 @@ function update(){
 
 	moveEnemy();
 
-	if(lives=0.0){
-		endgame();
+	if(lives<=0.0){
+		endGame();
 	}
 
 }
