@@ -89,6 +89,7 @@ function update(){
 	game.physics.arcade.collide(player, platforms);
 	game.physics.arcade.collide(stars, platforms); 
 	game.physics.arcade.collide(enemy1, platforms);
+	game.physics.arcade.collide(enemy3, platforms);
 
 	player.body.velocity.x = 0;
 
@@ -134,7 +135,6 @@ function update(){
 			enemy1.animations.play('right');
 			enemy1.body.velocity.x = 120;
 		}
-
 		if(enemy2.x > 760){
 			enemy2.animations.play('left');
 			enemy2.body.velocity.x = -150;
