@@ -54,6 +54,7 @@ function create(){
 		enemy1.body.gravity.y = 1000;
 		enemy1.body.bounce.y = 0.3;
 		enemy1.body.collideWorldBounds = true;
+		enemy1.body.velocity.x = 120;
 
 		enemy2 = game.add.sprite(440, 1, 'dog')
 		enemy2.animations.add('left', [0,1],10,true);
@@ -62,6 +63,7 @@ function create(){
 		enemy2.body.gravity.y = 1000;
 		enemy2.body.bounce.y = 0.3;
 		enemy2.body.collideWorldBounds = true;
+		enemy2.body.velocity.x = 120;
 
 		enemy3 = game.add.sprite(660, 10, 'dog')
 		enemy3.animations.add('left', [0,1],10,true);
@@ -70,6 +72,7 @@ function create(){
 		enemy3.body.gravity.y = 1000;
 		enemy3.body.bounce.y = 0.3;
 		enemy3.body.collideWorldBounds = true;
+		enemy3.body.velocity.x = 120;
 
 
 		stars = game.add.physicsGroup();
@@ -121,6 +124,7 @@ function update(){
 	}
 	
 	game.physics.arcade.overlap(player, stars, collectStar);
+	game.physics.arcade.overlap(player, firstaids, collectFirstaid);
 	game.physics.arcade.overlap(player, enemy1, loseLife);
 	game.physics.arcade.overlap(player, enemy2, loseLife);
 	game.physics.arcade.overlap(player, enemy3, loseLife);
