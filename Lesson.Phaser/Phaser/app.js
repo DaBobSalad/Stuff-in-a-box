@@ -1,6 +1,6 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:create, update:update});
 var score = 0;
-var lives = 1.5;
+var lives = 2;
 
 function preload(){
 	game.load.image('sky', 'assets/sky.png');
@@ -55,7 +55,7 @@ function create(){
 		enemy1.body.bounce.y = 0.3;
 		enemy1.body.collideWorldBounds = true;
 
-		enemy2 = game.add.sprite(0, 1, 'dog')
+		enemy2 = game.add.sprite(440, 1, 'dog')
 		enemy2.animations.add('left', [0,1],10,true);
 		enemy2.animations.add('right', [2,3],10, true)	
 		game.physics.arcade.enable(enemy2);
@@ -63,7 +63,7 @@ function create(){
 		enemy2.body.bounce.y = 0.3;
 		enemy2.body.collideWorldBounds = true;
 
-		enemy3 = game.add.sprite(0, 10, 'dog')
+		enemy3 = game.add.sprite(660, 10, 'dog')
 		enemy3.animations.add('left', [0,1],10,true);
 		enemy3.animations.add('right', [2,3],10, true)	
 		game.physics.arcade.enable(enemy3);
