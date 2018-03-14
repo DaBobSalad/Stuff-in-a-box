@@ -62,6 +62,14 @@ function create(){
 		enemy2.body.bounce.y = 0.3;
 		enemy2.body.collideWorldBounds = true;
 
+		enemy3 = game.add.sprite(0, 10, 'dog')
+		enemy3.animations.add('left', [0,1],10,true);
+		enemy3.animations.add('right', [2,3],10, true)	
+		game.physics.arcade.enable(enemy3);
+		enemy3.body.gravity.y = 1000;
+		enemy3.body.bounce.y = 0.3;
+		enemy3.body.collideWorldBounds = true;
+
 
 		stars = game.add.physicsGroup();
 		stars.enableBody = true;
@@ -133,6 +141,13 @@ function update(){
 		} else if(enemy2.x < 1){
 			enemy2.animations.play('right');
 			enemy2.body.velocity.x = 120;
+		}
+		if(enemy3.x > 760){
+			enemy3.animations.play('left');
+			enemy3.body.velocity.x = -150;
+		} else if(enemy3.x < 1){
+			enemy3.animations.play('right');
+			enemy3.body.velocity.x = 120;
 		}
 	}
 
