@@ -54,7 +54,7 @@ function create(){
 		enemy1.body.bounce.y = 0.3;
 		enemy1.body.collideWorldBounds = true;
 
-		enemy2 = game.add.sprite(0, 0, 'dog')
+		enemy2 = game.add.sprite(0, 1, 'dog')
 		enemy2.animations.add('left', [0,1],10,true);
 		enemy2.animations.add('right', [2,3],10, true)	
 		game.physics.arcade.enable(enemy2);
@@ -110,6 +110,8 @@ function update(){
 	
 	game.physics.arcade.overlap(player, stars, collectStar);
 	game.physics.arcade.overlap(player, enemy1, loseLife);
+	game.physics.arcade.overlap(player, enemy2, loseLife);
+	game.physics.arcade.overlap(player, enemy3, loseLife);
 
 	moveEnemy();
 
