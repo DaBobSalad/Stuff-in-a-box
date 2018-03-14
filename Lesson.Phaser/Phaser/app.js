@@ -8,6 +8,7 @@ function preload(){
 	game.load.image('star', 'assets/star.png');
 	game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
 	game.load.spritesheet('dog', 'assets/baddie.png', 32, 32)
+	game.load.image('firstaid'  'assets/firstaid.png');
 }
 
 function create(){
@@ -80,6 +81,16 @@ function create(){
 		star.body.bounce.y = 0.7 + Math.random()* 0.3;
 		}
 
+		firstaid = game.add.physicsGroup();
+		firstaid.enableBody = true;
+
+		for(var i=0; i < 1; i++){
+			var firstaid = stars.create(i * 70, 0, 'firstaid');
+		firstaid.body.gravity.y = 200;
+		firstaid.body.bounce.y = 0.7 + Math.random()* 0.3;
+		}
+
+
 		cursors = game.input.keyboard.createCursorKeys();
 }
 
@@ -90,6 +101,7 @@ function update(){
 	game.physics.arcade.collide(stars, platforms); 
 	game.physics.arcade.collide(enemy1, platforms);
 	game.physics.arcade.collide(enemy3, platforms);
+	game.physics.arcade.collide(firstaid, platforms);
 
 	player.body.velocity.x = 0;
 
