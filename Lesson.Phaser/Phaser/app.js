@@ -54,7 +54,7 @@ function create(){
 		enemy1.body.bounce.y = 0.3;
 		enemy1.body.collideWorldBounds = true;
 
-		enemy2 = game.add.sprite(200, 0, 'dog')
+		enemy2 = game.add.sprite(0, 0, 'dog')
 		enemy2.animations.add('left', [0,1],10,true);
 		enemy2.animations.add('right', [2,3],10, true)	
 		game.physics.arcade.enable(enemy2);
@@ -138,7 +138,7 @@ function update(){
 		if(enemy2.x > 760){
 			enemy2.animations.play('left');
 			enemy2.body.velocity.x = -150;
-		} else if(enemy2.x < 1){
+		} else if(enemy2.x < 0){
 			enemy2.animations.play('right');
 			enemy2.body.velocity.x = 120;
 		}
