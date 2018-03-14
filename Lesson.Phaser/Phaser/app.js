@@ -138,7 +138,7 @@ function update(){
 		if(enemy2.x > 760){
 			enemy2.animations.play('left');
 			enemy2.body.velocity.x = -150;
-		} else if(enemy2.x < 0){
+		} else if(enemy2.x < 1){
 			enemy2.animations.play('right');
 			enemy2.body.velocity.x = 120;
 		}
