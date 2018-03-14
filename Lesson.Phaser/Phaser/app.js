@@ -178,4 +178,11 @@ function update(){
 		scoretext.setText(score);
 		star.kill();
 		star.reset(Math.random()* 760, 0);
+	
+
+	function collectFirstaid{
+		lives += 0.5;
+		lifetext.setText(lives);
+		firstaid.kill();
+		firstaid.reset(Math.random()*760, 0)
 	}
