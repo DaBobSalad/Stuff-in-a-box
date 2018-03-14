@@ -178,7 +178,7 @@ function update(){
 		scoretext.setText(score);
 		star.kill();
 		star.reset(Math.random()* 760, 0);
-	
+	}
 
 	function collectFirstaid(player,firstaid){
 		lives += 0.5;
