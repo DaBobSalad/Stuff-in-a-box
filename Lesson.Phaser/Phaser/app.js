@@ -180,7 +180,7 @@ function update(){
 		star.reset(Math.random()* 760, 0);
 	
 
-	function collectFirstaid{
+	function collectFirstaid(player,firstaid){
 		lives += 0.5;
 		lifetext.setText(lives);
 		firstaid.kill();
