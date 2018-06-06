@@ -78,7 +78,7 @@ $(document).ready(function(){
       // Parameters for Sprite => (image's src, top left corner x, y, width, height)
       alienSprite = [
       [new Sprite(this, 0,0, 22, 16), new Sprite(this, 0,16, 22, 16)],
-      [new Sprite(this, 22,0, 16, 16), new Sprite(this, 22,16, 24, 16)],
+      [new Sprite(this, 22,0, 16, 16), new Sprite(this, 22,16, 16, 16)],
       [new Sprite(this, 38,0, 24, 16), new Sprite(this, 38,16, 24, 16)]
       ];
 
@@ -136,7 +136,7 @@ $(document).ready(function(){
       tank.x -= 4;
     }
 
-    if(keyPressed.indexOf(39) != 1){
+    if(keyPressed.indexOf(39) != -1){
       tank.x += 4;
     }
 
