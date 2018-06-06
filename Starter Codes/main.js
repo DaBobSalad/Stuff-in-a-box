@@ -78,8 +78,8 @@ $(document).ready(function(){
       // Parameters for Sprite => (image's src, top left corner x, y, width, height)
       alienSprite = [
       [new Sprite(this, 0,0, 22, 16), new Sprite(this, 0,16, 22, 16)],
-      [new Sprite(this, 22,0, 16, 16), new Sprite(this, 22,16, 16, 16)],
-      [new Sprite(this, 38,0, 24, 16), new Sprite(this, 38,16, 16, 16)]
+      [new Sprite(this, 22,0, 16, 16), new Sprite(this, 22,16, 24, 16)],
+      [new Sprite(this, 38,0, 24, 16), new Sprite(this, 38,16, 24, 16)]
       ];
 
       tankSprite = new Sprite(this, 62, 0, 22, 16);
@@ -132,7 +132,7 @@ $(document).ready(function(){
   function update(){
 
     // Moving the tank
-    if(keyPressed.indexOf(37) != 1){
+    if(keyPressed.indexOf(37) != -1){
       tank.x -= 4;
     }
 
@@ -159,10 +159,10 @@ $(document).ready(function(){
       
       // Check if the bullet hits the cities (bullets from aliens & player)
       let h2 = bullet.height / 2;
-      if(cities.y < bullet.y + bullet.height && bullet.y + bullet < cities.y + cities.height){
+      if(cities.y < bullet.y + bullet.height && bullet.y + bullet.height < cities.y + cities.height){
 
         if(cities.gotHit(bullet.x, bullet.y + bullet.height)){
-          bullet.splice(1,1);
+          bullets.splice(i,1);
           i--;
           continue
         }
@@ -172,7 +172,7 @@ $(document).ready(function(){
       for(let j = 0; j < aliens.length; j++){
         let alien = aliens[j];
         if(Colliding(alien, bullet) && bullet.speed_y < 0){
-          alien.splice(j, 1);
+          aliens.splice(j, 1);
           j--;
           bullets.splice(i, 1);
           i--;
@@ -227,7 +227,7 @@ $(document).ready(function(){
             let bottomMost = 0;
       if(rightMost > screen.width - 30 || leftMost < 30){
         alien_direction *= -1;
-        for(let j = 0; j < alien.length; j++){
+        for(let j = 0; j < aliens.length; j++){
           let alien = aliens[j];
           alien.x += 30 * alien_direction;
           alien.y += 30;
@@ -288,7 +288,7 @@ $(document).ready(function(){
       let key = event.which;
 
       if(keyPressed.indexOf(key) == -1){
-
+        keyPressed.push(key)
         if(key == 32){
           bullets.push(new Bullet(tank.x + 10, tank.y, -8, 2, 6,"aquamarine"))
         }
@@ -305,7 +305,7 @@ $(document).ready(function(){
     })
 
   // When retry button is click, restart the game.
-  $("retry").on("click", function(){
+  $("#retry").on("click", function(){
     init();
     $(this).hide();
   })
